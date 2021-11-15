@@ -1,0 +1,28 @@
+ import java.util.*;
+    interface parent
+    {
+        void message();
+    }
+    class A implements parent
+    {
+        public void message()
+        {
+            System.out.println("This is first subclass");
+        }}
+    class B implements parent
+    {
+        public void message()
+        {
+            System.out.println("This is second subclass");
+        }}
+    class interfacedemo
+    {
+        public static void main(String args[])
+        {
+            A a = new A();
+            B b = new B();
+            a.message();
+            b.message();
+        }
+    }
+
