@@ -1,0 +1,28 @@
+import java.lang.Cloneable;
+class alpha implements Cloneable {
+    int i;
+    String s;
+    public alpha(int i, String s)
+    {
+        this.i = i;
+        this.s = s;
+    }
+    @Override
+    protected Object clone()
+            throws CloneNotSupportedException
+    {
+        return super.clone();
+    }
+}
+
+public class Test {
+    public static void main(String[] args)
+            throws CloneNotSupportedException
+    {
+        alpha a = new alpha(20, "Datta sai pavan");
+        alpha b = (alpha)a.clone();
+
+        System.out.println(b.i);
+        System.out.println(b.s);
+    }
+}
