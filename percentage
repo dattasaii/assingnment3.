@@ -1,0 +1,40 @@
+import java.util.*;
+interface marks
+{
+    void getPercentage();
+}
+class A implements marks
+{
+    public void getPercentage(){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter 3 marks");
+        float a=sc.nextFloat();
+        float b=sc.nextFloat();
+        float c=sc.nextFloat();
+        float p=a+b+c;
+        p=(p/300);
+        p=p*100;
+        System.out.println(p);}}
+class B implements marks
+{
+    public void getPercentage()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter four marks");
+        float a=sc.nextFloat();
+        float b=sc.nextFloat();
+        float c=sc.nextFloat();
+        float d=sc.nextFloat();
+        float p=a+b+c+d;
+        p=(p/400);
+        p=p*100;
+        System.out.println(p);}}
+class abc
+{
+    public static void main(String args[]){
+        A a = new A();
+        a.getPercentage();
+        B b=new B();
+        b.getPercentage();
+    }
+}
